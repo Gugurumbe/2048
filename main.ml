@@ -21,6 +21,7 @@ let service in_chan out_chan =
     else
       (output_string out_chan "Gnééé ?\n" ; true)
   in
+  ignore (ecraser 1 0) ;
   while !continuer do
     begin
       Jeu.output_game out_chan jeu ;
