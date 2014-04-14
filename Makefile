@@ -1,7 +1,9 @@
 SRC = jeu.ml main.ml
 
+DEP = unix.cmxa
+
 TO_COMPILE = $(SRC:.ml=.cmx)
-TO_LINK = $(TO_COMPILE)
+TO_LINK = $(DEP) $(TO_COMPILE)
 
 .PHONY : server clean
 
